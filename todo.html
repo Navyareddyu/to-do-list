@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>To-Do List</title>
+  <link rel="stylesheet" href="todo.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap" rel="stylesheet">
+</head>
+<body>
+  <main class="app">
+    <header class="header">
+      <h1>To-Do</h1>
+      <p class="subtitle">Add tasks and tick them off.</p>
+    </header>
+
+    <form class="add-form" id="addForm">
+      <input
+        type="text"
+        class="input"
+        id="taskInput"
+        placeholder="What needs to be done?"
+        autocomplete="off"
+        maxlength="200"
+      />
+      <button type="submit" class="btn btn-add" id="addBtn" aria-label="Add task">Add</button>
+    </form>
+
+    <div class="filters" id="filters">
+      <button type="button" class="filter-btn active" data-filter="all">All</button>
+      <button type="button" class="filter-btn" data-filter="active">Active</button>
+      <button type="button" class="filter-btn" data-filter="completed">Completed</button>
+    </div>
+
+    <ul class="task-list" id="taskList"></ul>
+
+    <footer class="footer">
+      <span class="count" id="count">0 items left</span>
+      <button type="button" class="btn btn-clear" id="clearCompleted">Clear completed</button>
+    </footer>
+  </main>
+  <script src="todo.js"></script>
+</body>
+</html>
